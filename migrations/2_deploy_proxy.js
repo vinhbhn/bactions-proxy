@@ -21,5 +21,7 @@ module.exports = async function(deployer, network, accounts) {
         await deployer.deploy(BActions, BFactory.address);
     } else if (network == 'kovan-fork' || network == 'kovan') {
         deployer.deploy(BActions, '0x8f7F78080219d4066A8036ccD30D588B416a40DB');
+    } else if (network == 'mumbai') {
+        deployer.deploy(BActions, '0x07209Ea76Df0EE31F825cbEE11348Cc6A99B12f1');
     }
 }

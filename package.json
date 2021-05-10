@@ -21,6 +21,7 @@
     },
     "homepage": "https://github.com/balancer-labs/bactions-proxy#readme",
     "devDependencies": {
+        "@truffle/hdwallet-provider": "1.2.2",
         "chai": "^4.2.0",
         "coveralls": "^3.0.8",
         "eslint": "^6.7.1",
