@@ -22,6 +22,16 @@ module.exports = async function(deployer, network, accounts) {
     } else if (network == 'kovan-fork' || network == 'kovan') {
         deployer.deploy(BActions, '0x8f7F78080219d4066A8036ccD30D588B416a40DB');
     } else if (network == 'mumbai') {
-        deployer.deploy(BActions, '0x07209Ea76Df0EE31F825cbEE11348Cc6A99B12f1');
+        await deployer.deploy(RightsManager);
+        await deployer.deploy(SmartPoolManager);
+        await deployer.deploy(BalancerSafeMath);
+
+        await deployer.link(BalancerSafeMath, CRPFactory);
+        await deployer.link(RightsManager, CRPFactory);
+        await deployer.link(SmartPoolManager, CRPFactory);
+
+        await deployer.deploy(CRPFactory);
+
+        await deployer.deploy(BActions, '0xFFA9bBF7A3aA4C740c567fc5a405D4fa8A23DA00');
     }
 }
