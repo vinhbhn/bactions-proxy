@@ -32,6 +32,6 @@ module.exports = async function(deployer, network, accounts) {
 
         await deployer.deploy(CRPFactory);
 
-        await deployer.deploy(BActions, '0xFFA9bBF7A3aA4C740c567fc5a405D4fa8A23DA00');
+        await deployer.deploy(BActions, '0x43F1400cbb9391665eA91CdD657CC54BED31CE49');
     }
 }

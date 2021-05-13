@@ -19,7 +19,7 @@ module.exports = {
         },
         mumbai: {
             // eslint-disable-next-line max-len
-            provider: () => new HDWalletProvider(process.env.MNEMONIC, 'https://rpc-mumbai.maticvigil.com'),
+            provider: () => new HDWalletProvider(process.env.MNEMONIC, 'https://matic-mumbai.chainstacklabs.com'),
             network_id: 80001,
             gasPrice: 3000000000, // 3 gwei
             confirmations: 2,
